@@ -18,10 +18,13 @@ public class Sub extends Super {
     }
 
     public void log() {
-        new Handler().post(() -> {
-            Timber.v("call super method, return : %s", super.method());
-            Timber.v("call this method, return : %s", method());
-            Timber.v("call wrap method, return : %s", wrap());
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                Timber.v("call super method, return : %s", Sub.super.method()); // this is not return "Super" when using proguard5.3
+                Timber.v("call this method, return : %s", method());
+                Timber.v("call wrap method, return : %s", wrap());
+            }
         });
 
     }
