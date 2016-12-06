@@ -42,4 +42,11 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/error_occur"
+        android:text="error occur"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"/>
 </LinearLayout>

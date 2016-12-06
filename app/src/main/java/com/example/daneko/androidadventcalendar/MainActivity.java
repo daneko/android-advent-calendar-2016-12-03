@@ -6,6 +6,7 @@ import android.view.View;
 
 import android.support.v7.app.AppCompatActivity;
 
+import com.example.daneko.androidadventcalendar.kotlin.SampleKotlin;
 import com.example.daneko.androidadventcalendar.proguard.Sub;
 
 import rx.subscriptions.CompositeSubscription;
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new Sub().log();
+            }
+        });
+
+        findViewById(R.id.error_occur).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new SampleKotlin().method();
             }
         });
     }
